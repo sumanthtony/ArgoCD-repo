@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-app
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: swiggy
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: cont-1
-        image: nginx
+        image: shaikmustafa/netflix
         ports:
         - containerPort: 80
       
