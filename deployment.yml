@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: mydep
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: swiggy
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cont1
-          image: shaikmustafa/dm
+          image: shaikmustafa/mygame
           ports:
             - containerPort: 80
 
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops
+  name: mysvc
 
 spec:
  type: NodePort
